@@ -79,3 +79,13 @@ async def toggle_task_status(task_id: int, status: bool, request: Request, db : 
         db.commit()
         return "Status Changed"
     return "Task Not found"
+
+@app.get("/ping")
+@app.head("/ping")
+def ping():
+    """Endpoint for UptimeRobot to keep Render awake"""
+    return {"status": "Alive"}
+
+@app.get("/")
+def greet():
+    return{"message": "Hello from backend"}

@@ -1,4 +1,4 @@
-const BaseURL = "http://127.0.0.1:8000";
+const BaseURL = "https://to-do-list-95ir.onrender.com";
 let loginForm, registerForm;
 let container, dialogBox, taskInput, AddTaskBtn, RefreshBtn;
 window.addEventListener("load", ()=>{
