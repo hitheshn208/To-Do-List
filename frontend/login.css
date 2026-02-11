@@ -1,0 +1,123 @@
+:root {
+    --bg-color: #e3f2fd;
+    --card-bg: rgba(255, 255, 255, 0.8);
+    --primary-green: #7dc48d;
+    --text-gray: #888;
+    --shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+
+.auth-card {
+    background: var(--card-bg);
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: var(--shadow);
+    width: 400px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+/* Tab Switcher Styles */
+.tab-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.tab {
+    padding: 10px 30px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+    border: none;
+    font-size: 16px;
+}
+
+.tab.active {
+    background-color: #b0b0b0;
+    color: white;
+}
+
+.tab.inactive {
+    background-color: white;
+    color: #ccc;
+}
+
+/* Form Styles */
+.form-content {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-content.active {
+    display: flex;
+    animation: fadeIn 0.4s ease;
+}
+
+input {
+    width: 100%;
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid #eee;
+    box-sizing: border-box;
+    outline: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: var(--primary-green);
+    box-shadow: 0 0 8px rgba(125, 196, 141, 0.2);
+}
+
+.input-group {
+    position: relative;
+}
+
+.input-group i {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    color: #ccc;
+}
+
+/* Button Style */
+.submit-btn {
+    background-color: var(--primary-green);
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: transform 0.2s;
+}
+
+.submit-btn:hover {
+    transform: scale(1.02);
+    filter: brightness(1.05);
+}
+
+.submit-btn:disabled{
+    opacity:0.5;
+}
+
+.footer-links {
+    margin-top: 20px;
+    font-size: 13px;
+}
+
+.footer-links a {
+    color: #5da9e9;
+    text-decoration: none;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
