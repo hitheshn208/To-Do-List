@@ -12,7 +12,7 @@ app.include_router(auth_router, prefix="/auth")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins = ["http://127.0.0.1:5500"],
+    allow_origins = ["http://127.0.0.1:5500", "https://to-do-list-lyart-eight-83.vercel.app/"],
     allow_methods = ["*"],
     allow_headers = ["*"],
     allow_credentials = True
