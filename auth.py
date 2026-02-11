@@ -55,7 +55,7 @@ async def register_new_user(user: UserCreate, response: Response, db : Session =
         value=token,
         httponly=True,
         secure=IS_PRODUCTION,
-        samesite="strict",
+        samesite="none",
     )
     
     return {"message": "User registered successfully"}
@@ -93,8 +93,8 @@ async def login_user(user: UserLogin, response: Response, db: Session = Depends(
         key="access_token",
         value=token,
         httponly=True,
-        secure=False,
-        samesite="strict"
+        secure=IS_PRODUCTION,
+        samesite="none"
     )
 
     return {"message" : "Login Successful"}
